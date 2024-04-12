@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrhythmia Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 80px;
+            color: #333;
+        }
+
+        /* Styles for the navigation bar */
+        nav {
+            background-color: #319cb9;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #010101;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .card {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .card img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card h2 {
+            text-align: center;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ol {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #319cb9;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<h1>ARRYTHMIA CLASSIFIER</h1>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/prediction">Predict</a></li>
+        <li><a href="/converter">CSV Converter</a></li>
+    </ul>
+</nav>
+
+<div class="card">
+    <h2>Arrhythmia Overview</h2>
+    <p>Arrhythmia is a common cardiac condition characterized by irregular heart rhythms that can lead to serious complications if left untreated. Electrocardiogram (ECG) signals are crucial in diagnosing and monitoring arrhythmias. This project aims to develop a machine learning model capable of accurately classifying different types of arrhythmias based on ECG signals, with the goal of improving diagnostic efficiency and patient outcomes. The proposed system integrates deep learning and traditional machine learning techniques, including data preprocessing, feature extraction, and model development.</p>
+</div>
+
+<div class="card">
+    <img src="{{ url_for('static', filename='uneven heartbeat.webp') }}" alt="types of heartbeat">
+    <h2>Our Objective</h2>
+    <p>The primary objective of this project is to develop a machine learning model capable of accurately classifying different types of arrhythmias based on ECG signals. This model aims to improve diagnostic efficiency and enable prompt medical intervention, ultimately leading to better patient outcomes.</p>
+</div>
+
+<div class="card">
+    <img src="{{ url_for('static', filename='Untitled design.png') }}" alt="System design">
+    <h2>Detection</h2>
+    <p>Our classifier uses advanced algorithms to detect arrhythmias from ECG signals. A neural network is a type of machine learning model that is inspired by the structure and function of the human brain. Neural networks are made up of interconnected nodes, called neurons, which process information and transmit it to other neurons. The neurons in a neural network are organized into layers, and each layer performs a specific task. Neural networks are trained on data by adjusting the weights of the connections between the neurons. This process is called supervised learning, because the neural network is given a set of labeled data, where each data point is associated with a known output. The neural network learns to predict the output for new data points by adjusting the weights of the connections between the neurons so that it can minimize the error between its predictions and the actual outputs.</p>
+    <p>CNNs are a type of feedforward neural network that is particularly well-suited for image recognition and analysis. CNNs are made up of convolutional layers, which extract features from the input data by applying a series of filters to the data. CNNs have been shown to achieve state-of-the-art results in a wide variety of image recognition tasks, such as object detection, classification, and segmentation.</p>
+</div>
+
+<div class="card">
+    <h2>How to use the classifier</h2>
+    <ol>
+        <li>Click on the "Predict" option at the top of the navigation bar.</li>
+        <li>You will be redirected to a page where you can upload an ECG file in CSV format. If you have the file in .dat format, go to the "CSV Converter" option in the navigation bar.</li>
+        <li>In the CSV Converter page, upload your .dat file and convert it to CSV format. Download the converted CSV file to your computer.</li>
+        <li>Go back to the "Predict" page and upload the CSV file you downloaded.</li>
+        <li>Click on the "Submit" button to process the file.</li>
+        <li>The result of the prediction will be displayed on the page.</li>
+    </ol>
+</div>
+
+<footer>&copy; 2024 Arrhythmia Classifier</footer>
+</body>
+</html>

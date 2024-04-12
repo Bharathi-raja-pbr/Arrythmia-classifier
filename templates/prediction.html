@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV File</title>
+
+    <style>
+        /* Styles for the navigation bar */
+        nav {
+            background-color: #319cb9;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #010101;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .card {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .card img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 80px;
+            color: #333;
+        }
+
+        /* Styles for the form */
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            background-color: #319cb9;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        button[type="submit"] {
+            background-color: #319cb9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px; /* Move the button down */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #007bff;
+        }
+        label img {
+            max-width: 200px;
+            height: auto;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading img {
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar, etc. (same as before) -->
+    <h1>ARRYHTHMIA CLASSIFIER</h1>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/prediction">Predict</a></li>
+            <li><a href="/converter">CSV Converter</a></li>
+        </ul>
+    </nav>
+
+    <h1>Upload a CSV File</h1>
+    <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+        <label for="file">
+            <img src="{{ url_for('static', filename='upload.jpeg') }}" alt="Upload a csv file">
+        </label>
+        <input type="file" id="file" name="file" accept=".csv">
+        <br>
+        <button type="submit" id="uploadButton">Upload</button>
+    </form>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="loading">
+        <img src="{{ url_for('static', filename='loading.jpeg') }}" alt="Loading...">
+    </div>
+
+    <script>
+        // Add event listener to the form submission
+        document.getElementById('uploadForm').addEventListener('submit', function() {
+            // Show the loading spinner
+            document.getElementById('loading').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

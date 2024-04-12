@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrhythmia Classifier</title>
+<style>
+
+nav {
+            background-color: #319cb9;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #010101;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .card {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .card img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 80px;
+            color: #333;
+        }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #cbcaca;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px; /* Add margin to the top of the heading */
+    color: #333; /* Set font color to dark gray */
+  }
+
+  h2 {
+    font-size: 30px;
+    color: #007bff; /* Set font color to blue */
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .prediction-result {
+    border: 4px solid black;
+    padding: 20px; /* Increase the padding */
+    text-align: center;
+    margin: 20px auto;
+    margin-top: 100px; /* Center the prediction result and add margin */
+    max-width: 800px; /* Limit the width of the prediction result */
+    background-color: #fff; /* Add background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .result {
+    font-weight: bold;
+    font-size: 24px;
+    /* Set font color to blue */
+  }
+
+  .description {
+    font-size: 18px;
+    color: #505050; /* Set font color to gray */
+  }
+</style>
+</head>
+<body>
+  <h1>ARRYTHMIA CLASSIFIER</h1>
+  <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/prediction">Predict</a></li>
+        <li><a href="/converter">CSV Converter</a></li>
+    </ul>
+</nav>
+  <div class="prediction-result">
+    <h2>Prediction Result</h2>
+    <div class="result">
+      <p>{{prediction}}</p>
+    </div>
+    <div class="description">
+      <p>{{des}}</p>
+    </div>
+  </div>
+</body>
+</html>
